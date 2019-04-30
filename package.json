@@ -1,0 +1,15 @@
+{
+  "name": "sendexe",
+  "version": "1.0.0",
+  "description": "sends json data to target address",
+  "main": "index.js",
+  "bin": "bin.js",   
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "uri even ezra",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
