@@ -1,12 +1,12 @@
 const fs = require('fs')
+const axios = require('axios')
 const fetchJson = (filePath) =>JSON.parse(fs.readFileSync(filePath).toString())
 
 module.exports = async function() {
     const conf = fetchJson('./exporter.json')
-    const {url, filename} = conf
-    const data = fs.readFileSync(`./${filename}`).toString()
-    const fakeData = [ { fake: 'data' } ];
-    return await axios.post(url, {
-       data: Data
+    const {url, file} = conf
+    const data = fs.readFileSync(`./${file}`).toString()
+    await axios.post(url, {
+       data: JSON.stringify(data)
     });    
 }
