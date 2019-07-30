@@ -26,8 +26,8 @@ const getEntry = ({ORD,FIELD,VALUE,DEF}) => {
     return `${Q1}${PAIR}${Q2}${Q3}${Q4}`; 
 }
 
-module.exports = async function() {
-//const xxx = async () => {
+//module.exports = async function() {
+const xxx = () => {
     const conf = fetchJson('./exporter.json')
     const {url, file} = conf
     const data = fs.readFileSync(`./${file}`).toString().replace(/\t/g, ',')
@@ -47,5 +47,5 @@ module.exports = async function() {
     }       
 }
 
-//xxx()
+xxx()
 
